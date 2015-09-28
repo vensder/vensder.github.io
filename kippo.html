@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Vensder's BooLog</title>
+    <title>KippoVensder's BooLog</title>
 
     <link rel="stylesheet" href="http://vensder.github.io/theme/css/main.css">
     <link rel="stylesheet" href="http://vensder.github.io/theme/css/pygment_trac.css">
@@ -34,7 +34,13 @@
 
       </header>
       <section>
-      <div class="front-title"><a href="http://vensder.github.io/kippo.html">Kippo</a></div>
+<section id="content" class="body">
+  <article>
+      <div class="article-title">
+        Kippo
+      </div>
+
+    <div class="entry-content">
 <p>
 <small>
 <abbr class="published" title="2015-09-28T23:24:00+03:00">
@@ -52,42 +58,28 @@
 
 
 <h5>You can view kippo logs from host by commands:</h5>
-<div class="highlight"><pre>sudo ...</pre></div> 
-      <div class="read-more"><a href="http://vensder.github.io/kippo.html">read more...</a></div>
-      <hr />
-      <div class="front-title"><a href="http://vensder.github.io/about.html">About</a></div>
-<p>
-<small>
-<abbr class="published" title="2015-09-28T19:55:00+03:00">
-  Mon 28 September 2015
-</abbr> | 
- -- (<a href="http://vensder.github.io/about.html" rel="bookmark">permalink</a>)
-</small>
-</p>      <p>Linux system administrator</p>
-<p>Tags: CentOS, Linux System Administration, Unix System Administration, Zabbix, Apache administration, Nginx, KVM Virtualization, phpMyAdmin, OpenVPN, Docker </p>
-<p>Overview</p>
-<h6></h6>
-<p>Hello! I'm Dmitry. Nice to meet you!
-I've 8+ years of experience in Linux System Administration (installing, configuring, maintaining, monitoring, troubleshooting Linux servers and services) . I worked ...</p> 
-      <div class="read-more"><a href="http://vensder.github.io/about.html">read more...</a></div>
-      <hr />
-      <div class="front-title"><a href="http://vensder.github.io/todo-list.html">Todo List</a></div>
-<p>
-<small>
-<abbr class="published" title="2015-09-28T15:24:00+03:00">
-  Mon 28 September 2015
-</abbr> | 
- -- (<a href="http://vensder.github.io/todo-list.html" rel="bookmark">permalink</a>)
-</small>
-</p>      <p>cryptocurrency (daemons and clients) in <strong>docker</strong></p>
-<p>php-app (twitter) on <strong>openshift</strong></p>
-<p><strong>python</strong>, git</p>
-<p>ruby, chef, <strong>ansible</strong>, puppet </p>
-<p><strong>openstack</strong></p>
-<p>hadoop </p> 
-      <div class="read-more"><a href="http://vensder.github.io/todo-list.html">read more...</a></div>
-      <hr />
+<div class="highlight"><pre>sudo docker logs kippo
+sudo docker logs -f --tail <span class="m">10</span> kippo 
+</pre></div>
 
+
+<h5>Also you may use volume mounting for host user with uid:gid 1001:1001</h5>
+<div class="highlight"><pre>sudo mkdir -p /home/kippo/log/tty
+sudo chown -R 1001:1001 /home/kippo
+sudo docker run -p 22:2222 -v /home/kippo/log:/home/kippo/log -d <span class="se">\</span>
+   --name kippo vensder/alpine-kippo
+</pre></div>
+
+
+<h5>If you use SELinux on host system, you must change file SELinux security context:</h5>
+<div class="highlight"><pre>sudo chcon -Rt svirt_sandbox_file_t /home/kippo
+</pre></div>
+
+
+<p>Logs will be write to /home/kippo/log/tty/ directory on your host system.</p>
+    </div><!-- /.entry-content -->
+  </article>
+</section>
       </section>
       <footer>
         <p><small>&copy; Vensder's BooLog &mdash; Theme based on Sundown by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
