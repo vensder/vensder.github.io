@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>A Pelican Blog</title><link href="/" rel="alternate"></link><link href="/feeds/todo.atom.xml" rel="self"></link><id>/</id><updated>2015-09-28T23:24:00+00:00</updated><entry><title>Kippo in Docker</title><link href="/kippo-in-docker.html" rel="alternate"></link><updated>2015-09-28T23:24:00+00:00</updated><author><name></name></author><id>tag:,2015-09-28:kippo-in-docker.html</id><summary type="html">&lt;p&gt;Lightweight Kippo SSH Honeypot (81 MB) based on Alpine Linux&lt;/p&gt;
+&lt;h6&gt;&lt;/h6&gt;
+&lt;p&gt;Move your real ssh port from default 22 to another (for ex. 22000)&lt;/p&gt;
+&lt;h5&gt;Run this docker image by command:&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo docker run -p 22:2222 -d &lt;span class="se"&gt;\&lt;/span&gt;
+  --name kippo vensder/alpine-kippo
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h5&gt;You can view kippo logs from host by commands:&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo docker logs kippo
+sudo docker logs -f --tail &lt;span class="m"&gt;10&lt;/span&gt; kippo 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h5&gt;Also you may use volume mounting for host user with uid:gid 1001:1001&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo mkdir -p /home/kippo/log/tty
+sudo chown -R 1001:1001 /home/kippo
+sudo docker run -p 22:2222 -v /home/kippo/log:/home/kippo/log -d &lt;span class="se"&gt;\&lt;/span&gt;
+   --name kippo vensder/alpine-kippo
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h5&gt;If you use SELinux on host system, you must change file SELinux security context:&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo chcon -Rt svirt_sandbox_file_t /home/kippo
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Logs will be write to /home/kippo/log/tty/ directory on your host system.&lt;/p&gt;</summary></entry><entry><title>Todo List</title><link href="/todo-list.html" rel="alternate"></link><updated>2015-09-28T15:24:00+00:00</updated><author><name></name></author><id>tag:,2015-09-28:todo-list.html</id><summary type="html">&lt;p&gt;cryptocurrency (daemons and clients) in &lt;strong&gt;docker&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;php-app (twitter) on &lt;strong&gt;openshift&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;python&lt;/strong&gt;, git&lt;/p&gt;
+&lt;p&gt;ruby, chef, &lt;strong&gt;ansible&lt;/strong&gt;, puppet &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;openstack&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;hadoop &lt;/p&gt;</summary></entry></feed>

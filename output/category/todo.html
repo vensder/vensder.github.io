@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>A Pelican Blog - todo</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="A Pelican Blog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">A Pelican Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/about.html">about</a></li>
+                    <li class="active"><a href="/category/todo.html">todo</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/kippo-in-docker.html">Kippo in Docker</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2015-09-28T23:24:00+00:00">
+                Published: Mon 28 September 2015
+        </abbr>
+
+<p>In <a href="/category/todo.html">todo</a>.</p>
+
+</footer><!-- /.post-info --><p>Lightweight Kippo SSH Honeypot (81 MB) based on Alpine Linux</p>
+<h6></h6>
+<p>Move your real ssh port from default 22 to another (for ex. 22000)</p>
+<h5>Run this docker image by command:</h5>
+<div class="highlight"><pre>sudo docker run -p 22:2222 -d <span class="se">\</span>
+  --name kippo vensder/alpine-kippo
+</pre></div>
+
+
+<h5>You can view kippo logs from host by commands:</h5>
+<div class="highlight"><pre>sudo docker logs kippo
+sudo docker logs -f --tail <span class="m">10</span> kippo 
+</pre></div>
+
+
+<h5>Also you may use volume mounting for host user with uid:gid 1001:1001</h5>
+<div class="highlight"><pre>sudo mkdir -p /home/kippo/log/tty
+sudo chown -R 1001:1001 /home/kippo
+sudo docker run -p 22:2222 -v /home/kippo/log:/home/kippo/log -d <span class="se">\</span>
+   --name kippo vensder/alpine-kippo
+</pre></div>
+
+
+<h5>If you use SELinux on host system, you must change file SELinux security context:</h5>
+<div class="highlight"><pre>sudo chcon -Rt svirt_sandbox_file_t /home/kippo
+</pre></div>
+
+
+<p>Logs will be write to /home/kippo/log/tty/ directory on your host system.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/todo-list.html" rel="bookmark"
+                           title="Permalink to Todo List">Todo List</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-09-28T15:24:00+00:00">
+                Published: Mon 28 September 2015
+        </abbr>
+
+<p>In <a href="/category/todo.html">todo</a>.</p>
+
+</footer><!-- /.post-info -->                <p>cryptocurrency (daemons and clients) in <strong>docker</strong></p>
+<p>php-app (twitter) on <strong>openshift</strong></p>
+<p><strong>python</strong>, git</p>
+<p>ruby, chef, <strong>ansible</strong>, puppet </p>
+<p><strong>openstack</strong></p>
+<p>hadoop </p>
+                <a class="readmore" href="/todo-list.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
