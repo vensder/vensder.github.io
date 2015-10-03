@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <title>Vensder's B00L10g</title>
+        <meta charset="utf-8" />
+
+
+
+
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://vensder.github.io/">Vensder's B00L10g <strong></strong></a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+        </ul></nav><!-- /#menu -->
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="http://vensder.github.io/virtualenv-for-python-in-centos.html" rel="bookmark"
+         title="Permalink to Virtualenv for Python in CentOS">Virtualenv for Python in CentOS</a></h2>
+ 
+  </header>
+  <footer class="post-info">
+    <abbr class="published" title="2015-10-03T11:04:00+03:00">
+      Sat 03 October 2015
+    </abbr>
+    <address class="vcard author">
+      By           <a class="url fn" href="http://vensder.github.io/author/vensder.html">Vensder</a>
+    </address>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <p>Virtualenv for Python in CentOS</p>
+<h6></h6>
+<div class="highlight"><pre>Oct 02 22:28:35 Installed: python27-libs-2.7.3-6.2.el6.nux.x86_64
+Oct 02 22:28:36 Installed: python27-2.7.3-6.2.el6.nux.x86_64
+Oct 02 23:56:57 Installed: python-devel-2.6.6-64.el6.x86_64
+Oct 02 23:56:58 Installed: python-virtualenv-1.10.1-1.el6.noarch
+Oct 02 23:57:03 Installed: python-virtualenv-clone-0.2.4-1.el6.noarch
+Oct 02 23:57:04 Installed: python-virtualenvwrapper-3.5-2.el6.noarch
+</pre></div>
+
+
+<div class="highlight"><pre>mkdir ~/venv <span class="o">&amp;&amp;</span> <span class="nb">cd</span> ~/venv
+virtualenv --no-site-packages &lt;venv_name&gt;
+</pre></div>
+
+
+<div class="highlight"><pre><span class="nb">cd</span> ~/work/&lt;project_name&gt;
+mkdir venv <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;Virtualenv directory&quot;</span> &gt; venv/README
+git add venv <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;/venv/&quot;</span> &gt;&gt; .gitignore <span class="o">&amp;&amp;</span> git add -f .gitignore
+virtualenv --no-site-packages --prompt<span class="o">=</span><span class="s2">&quot;(&lt;project_name&gt;)&quot;</span> &lt;venv_name&gt;
+</pre></div>
+
+
+<div class="highlight"><pre>source ~/venv/&lt;venv_name&gt;/bin/activate
+</pre></div>
+
+
+<div class="highlight"><pre>deactivate
+</pre></div>
+  </div><!-- /.entry-content -->
+</section>
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+</body>
+</html>
