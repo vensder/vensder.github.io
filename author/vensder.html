@@ -1,65 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Vensder's B00L10g - VensderVensder's B00L10g</title>
+<head>
+        <meta charset="utf-8" />
+        <title>Vensder's B00L10g - Vensder</title>
+        <link rel="stylesheet" href="http://vensder.github.io/theme/css/main.css" />
 
-    <link rel="stylesheet" href="http://vensder.github.io/theme/css/main.css">
-    <link rel="stylesheet" href="http://vensder.github.io/theme/css/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <div><img src="http://www.gravatar.com/avatar/cc3d6d02dee2b5b5c81460cab4d9da14?s=120&d=images%2Ftuxup_100.jpg" class="grv-img"/></div>
-        <div class="title"><a href="http://vensder.github.io/">Vensder's B00L10g </a></div>
-        <div class="sub-title"></div>
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
 
-<p>
-  <div class="view"><a href="http://vensder.github.io/archives.html">Archives</a></div>
-</p>
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://vensder.github.io/">Vensder's B00L10g </a></h1>
+                <nav><ul>
+                    <li><a href="http://vensder.github.io/category/about.html">about</a></li>
+                    <li><a href="http://vensder.github.io/category/python.html">python</a></li>
+                    <li><a href="http://vensder.github.io/category/todo.html">todo</a></li>
+                </ul>
+                </nav>
+        </header><!-- /#banner -->
 
-<!-- Social links -->
-<div class="social">
-<h4>Follow Me</h4>
-<ul>
-    <li><a href="https://www.linkedin.com/in/vensder">LinkedIN</a></li>
-    <li><a href="https://www.facebook.com/vensder">FaceB00k</a></li>
-    <li><a href="https://twitter.com/v3n5d3r">7wi773r</a></li>
-</ul>
-</div>
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="http://vensder.github.io/virtualenv-for-python-in-centos.html">Virtualenv for Python in CentOS</a></h1>
+<footer class="post-info">
+        <span>Sat 03 October 2015</span>
 
-      </header>
-      <section>
-      <div class="front-title"><a href="http://vensder.github.io/virtualenv-for-python-in-centos.html">Virtualenv for Python in CentOS</a></div>
-<p>
-<small>
-<abbr class="published" title="2015-10-03T11:04:00+03:00">
-  Sat 03 October 2015
-</abbr> | 
- -- (<a href="http://vensder.github.io/virtualenv-for-python-in-centos.html" rel="bookmark">permalink</a>)
-</small>
-</p>      <p>Virtualenv for Python in CentOS</p>
+</footer><!-- /.post-info --><p>Virtualenv for Python in CentOS</p>
 <h6></h6>
 <div class="highlight"><pre>Oct 02 22:28:35 Installed: python27-libs-2.7.3-6.2.el6.nux.x86_64
 Oct 02 22:28:36 Installed: python27-2.7.3-6.2.el6.nux.x86_64
 Oct 02 23:56:57 Installed: python-devel-2.6.6-64.el6.x86_64
-Oct 02 23:56:58 Installed: python-virtualenv-1.10 ...</pre></div> 
-      <div class="read-more"><a href="http://vensder.github.io/virtualenv-for-python-in-centos.html">read more...</a></div>
-      <hr />
-      <div class="front-title"><a href="http://vensder.github.io/kippo-in-docker.html">Kippo in Docker</a></div>
-<p>
-<small>
-<abbr class="published" title="2015-09-28T23:24:00+03:00">
-  Mon 28 September 2015
-</abbr> | 
- -- (<a href="http://vensder.github.io/kippo-in-docker.html" rel="bookmark">permalink</a>)
-</small>
-</p>      <p>Lightweight Kippo SSH Honeypot (81 MB) based on Alpine Linux</p>
+Oct 02 23:56:58 Installed: python-virtualenv-1.10.1-1.el6.noarch
+Oct 02 23:57:03 Installed: python-virtualenv-clone-0.2.4-1.el6.noarch
+Oct 02 23:57:04 Installed: python-virtualenvwrapper-3.5-2.el6.noarch
+</pre></div>
+
+
+<div class="highlight"><pre>mkdir ~/venv <span class="o">&amp;&amp;</span> <span class="nb">cd</span> ~/venv
+virtualenv --no-site-packages &lt;venv_name&gt;
+</pre></div>
+
+
+<div class="highlight"><pre><span class="nb">cd</span> ~/work/&lt;project_name&gt;
+mkdir venv <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;Virtualenv directory&quot;</span> &gt; venv/README
+git add venv <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;/venv/&quot;</span> &gt;&gt; .gitignore <span class="o">&amp;&amp;</span> git add -f .gitignore
+virtualenv --no-site-packages --prompt<span class="o">=</span><span class="s2">&quot;(&lt;project_name&gt;)&quot;</span> &lt;venv_name&gt;
+</pre></div>
+
+
+<div class="highlight"><pre>source ~/venv/&lt;venv_name&gt;/bin/activate
+</pre></div>
+
+
+<div class="highlight"><pre>deactivate
+</pre></div><p><a href="http://vensder.github.io/virtualenv-for-python-in-centos.html#disqus_thread">comments</a></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://vensder.github.io/kippo-in-docker.html" rel="bookmark"
+                           title="Permalink to Kippo in Docker">Kippo in Docker</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>Mon 28 September 2015</span>
+
+</footer><!-- /.post-info -->                <p>Lightweight Kippo SSH Honeypot (81 MB) based on Alpine Linux</p>
 <h6></h6>
 <p>Move your real ssh port from default 22 to another (for ex. 22000)</p>
 <h5>Run this docker image by command:</h5>
@@ -69,69 +81,88 @@ Oct 02 23:56:58 Installed: python-virtualenv-1.10 ...</pre></div>
 
 
 <h5>You can view kippo logs from host by commands:</h5>
-<div class="highlight"><pre>sudo ...</pre></div> 
-      <div class="read-more"><a href="http://vensder.github.io/kippo-in-docker.html">read more...</a></div>
-      <hr />
-      <div class="front-title"><a href="http://vensder.github.io/about.html">About</a></div>
-<p>
-<small>
-<abbr class="published" title="2015-09-28T19:55:00+03:00">
-  Mon 28 September 2015
-</abbr> | 
- -- (<a href="http://vensder.github.io/about.html" rel="bookmark">permalink</a>)
-</small>
-</p>      <p>Linux system administrator</p>
+<div class="highlight"><pre>sudo ...</pre></div>
+                <a class="readmore" href="http://vensder.github.io/kippo-in-docker.html">read more</a>
+<p><a href="http://vensder.github.io/kippo-in-docker.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://vensder.github.io/about.html" rel="bookmark"
+                           title="Permalink to About">About</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>Mon 28 September 2015</span>
+
+</footer><!-- /.post-info -->                <p>Linux system administrator</p>
 <p>Tags: CentOS, Linux System Administration, Unix System Administration, Zabbix, Apache administration, Nginx, KVM Virtualization, phpMyAdmin, OpenVPN, Docker </p>
 <p>Overview</p>
 <h6></h6>
 <p>Hello! I'm Dmitry. Nice to meet you!
-I've 8+ years of experience in Linux System Administration (installing, configuring, maintaining, monitoring, troubleshooting Linux servers and services) . I worked ...</p> 
-      <div class="read-more"><a href="http://vensder.github.io/about.html">read more...</a></div>
-      <hr />
-      <div class="front-title"><a href="http://vensder.github.io/todo-list.html">Todo List</a></div>
-<p>
-<small>
-<abbr class="published" title="2015-09-28T15:24:00+03:00">
-  Mon 28 September 2015
-</abbr> | 
- -- (<a href="http://vensder.github.io/todo-list.html" rel="bookmark">permalink</a>)
-</small>
-</p>      <p>cryptocurrency (daemons and clients) in <strong>docker</strong></p>
+I've 8+ years of experience in Linux System Administration (installing, configuring, maintaining, monitoring, troubleshooting Linux servers and services) . I worked ...</p>
+                <a class="readmore" href="http://vensder.github.io/about.html">read more</a>
+<p><a href="http://vensder.github.io/about.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://vensder.github.io/todo-list.html" rel="bookmark"
+                           title="Permalink to Todo List">Todo List</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>Mon 28 September 2015</span>
+
+</footer><!-- /.post-info -->                <p>cryptocurrency (daemons and clients) in <strong>docker</strong></p>
 <p>php-app (twitter) on <strong>openshift</strong></p>
 <p><strong>python</strong>, git</p>
 <p>ruby, chef, <strong>ansible</strong>, puppet </p>
 <p><strong>openstack</strong></p>
-<p>hadoop </p> 
-      <div class="read-more"><a href="http://vensder.github.io/todo-list.html">read more...</a></div>
-      <hr />
+<p>hadoop </p>
+                <a class="readmore" href="http://vensder.github.io/todo-list.html">read more</a>
+<p><a href="http://vensder.github.io/todo-list.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+            </ol><!-- /#posts-list -->
+<p class="paginator">
+    Page 1 / 1
+</p>
+            </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
 
-      </section>
-      <footer>
-        <p><small>&copy; Vensder's B00L10g &mdash; Theme based on Sundown by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <!-- Scale fix -->
-    <script>
-      var metas = document.getElementsByTagName('meta');
-      var i;
-      
-      if (navigator.userAgent.match(/iPhone/i)) {
-        for (i=0; i<metas.length; i++) {
-          if (metas[i].name == "viewport") {
-            metas[i].content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
-          }
-        }
-      
-        document.addEventListener("gesturestart", gestureStart, false);
-      }
+                            <li><a href="https://www.linkedin.com/in/vensder">LinkedIN</a></li>
+                            <li><a href="https://www.facebook.com/vensder">FaceB00k</a></li>
+                            <li><a href="https://twitter.com/v3n5d3r">7wi773r</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
 
-      function gestureStart() {
-        for (i=0; i<metas.length; i++) {
-          if (metas[i].name == "viewport") {
-            metas[i].content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
-          }
-        }
-      }
-    </script>
-  </body>
+        <footer id="contentinfo" class="body">
+                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
+        </footer><!-- /#contentinfo -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'vensdersb00l10g';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
 </html>

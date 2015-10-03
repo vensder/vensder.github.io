@@ -1,49 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Vensder's B00L10g - todoVensder's B00L10g</title>
+<head>
+        <meta charset="utf-8" />
+        <title>Vensder's B00L10g - todo</title>
+        <link rel="stylesheet" href="http://vensder.github.io/theme/css/main.css" />
 
-    <link rel="stylesheet" href="http://vensder.github.io/theme/css/main.css">
-    <link rel="stylesheet" href="http://vensder.github.io/theme/css/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <div><img src="http://www.gravatar.com/avatar/cc3d6d02dee2b5b5c81460cab4d9da14?s=120&d=images%2Ftuxup_100.jpg" class="grv-img"/></div>
-        <div class="title"><a href="http://vensder.github.io/">Vensder's B00L10g </a></div>
-        <div class="sub-title"></div>
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
 
-<p>
-  <div class="view"><a href="http://vensder.github.io/archives.html">Archives</a></div>
-</p>
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://vensder.github.io/">Vensder's B00L10g </a></h1>
+                <nav><ul>
+                    <li><a href="http://vensder.github.io/category/about.html">about</a></li>
+                    <li><a href="http://vensder.github.io/category/python.html">python</a></li>
+                    <li class="active"><a href="http://vensder.github.io/category/todo.html">todo</a></li>
+                </ul>
+                </nav>
+        </header><!-- /#banner -->
 
-<!-- Social links -->
-<div class="social">
-<h4>Follow Me</h4>
-<ul>
-    <li><a href="https://www.linkedin.com/in/vensder">LinkedIN</a></li>
-    <li><a href="https://www.facebook.com/vensder">FaceB00k</a></li>
-    <li><a href="https://twitter.com/v3n5d3r">7wi773r</a></li>
-</ul>
-</div>
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="http://vensder.github.io/kippo-in-docker.html">Kippo in Docker</a></h1>
+<footer class="post-info">
+        <span>Mon 28 September 2015</span>
 
-      </header>
-      <section>
-      <div class="front-title"><a href="http://vensder.github.io/kippo-in-docker.html">Kippo in Docker</a></div>
-<p>
-<small>
-<abbr class="published" title="2015-09-28T23:24:00+03:00">
-  Mon 28 September 2015
-</abbr> | 
- -- (<a href="http://vensder.github.io/kippo-in-docker.html" rel="bookmark">permalink</a>)
-</small>
-</p>      <p>Lightweight Kippo SSH Honeypot (81 MB) based on Alpine Linux</p>
+</footer><!-- /.post-info --><p>Lightweight Kippo SSH Honeypot (81 MB) based on Alpine Linux</p>
 <h6></h6>
 <p>Move your real ssh port from default 22 to another (for ex. 22000)</p>
 <h5>Run this docker image by command:</h5>
@@ -53,53 +37,87 @@
 
 
 <h5>You can view kippo logs from host by commands:</h5>
-<div class="highlight"><pre>sudo ...</pre></div> 
-      <div class="read-more"><a href="http://vensder.github.io/kippo-in-docker.html">read more...</a></div>
-      <hr />
-      <div class="front-title"><a href="http://vensder.github.io/todo-list.html">Todo List</a></div>
-<p>
-<small>
-<abbr class="published" title="2015-09-28T15:24:00+03:00">
-  Mon 28 September 2015
-</abbr> | 
- -- (<a href="http://vensder.github.io/todo-list.html" rel="bookmark">permalink</a>)
-</small>
-</p>      <p>cryptocurrency (daemons and clients) in <strong>docker</strong></p>
+<div class="highlight"><pre>sudo docker logs kippo
+sudo docker logs -f --tail <span class="m">10</span> kippo 
+</pre></div>
+
+
+<h5>Also you may use volume mounting for host user with uid:gid 1001:1001</h5>
+<div class="highlight"><pre>sudo mkdir -p /home/kippo/log/tty
+sudo chown -R 1001:1001 /home/kippo
+sudo docker run -p 22:2222 -v /home/kippo/log:/home/kippo/log -d <span class="se">\</span>
+   --name kippo vensder/alpine-kippo
+</pre></div>
+
+
+<h5>If you use SELinux on host system, you must change file SELinux security context:</h5>
+<div class="highlight"><pre>sudo chcon -Rt svirt_sandbox_file_t /home/kippo
+</pre></div>
+
+
+<p>Logs will be write to /home/kippo/log/tty/ directory on your host system.</p><p><a href="http://vensder.github.io/kippo-in-docker.html#disqus_thread">comments</a></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://vensder.github.io/todo-list.html" rel="bookmark"
+                           title="Permalink to Todo List">Todo List</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>Mon 28 September 2015</span>
+
+</footer><!-- /.post-info -->                <p>cryptocurrency (daemons and clients) in <strong>docker</strong></p>
 <p>php-app (twitter) on <strong>openshift</strong></p>
 <p><strong>python</strong>, git</p>
 <p>ruby, chef, <strong>ansible</strong>, puppet </p>
 <p><strong>openstack</strong></p>
-<p>hadoop </p> 
-      <div class="read-more"><a href="http://vensder.github.io/todo-list.html">read more...</a></div>
-      <hr />
+<p>hadoop </p>
+                <a class="readmore" href="http://vensder.github.io/todo-list.html">read more</a>
+<p><a href="http://vensder.github.io/todo-list.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+            </ol><!-- /#posts-list -->
+<p class="paginator">
+    Page 1 / 1
+</p>
+            </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
 
-      </section>
-      <footer>
-        <p><small>&copy; Vensder's B00L10g &mdash; Theme based on Sundown by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <!-- Scale fix -->
-    <script>
-      var metas = document.getElementsByTagName('meta');
-      var i;
-      
-      if (navigator.userAgent.match(/iPhone/i)) {
-        for (i=0; i<metas.length; i++) {
-          if (metas[i].name == "viewport") {
-            metas[i].content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
-          }
-        }
-      
-        document.addEventListener("gesturestart", gestureStart, false);
-      }
+                            <li><a href="https://www.linkedin.com/in/vensder">LinkedIN</a></li>
+                            <li><a href="https://www.facebook.com/vensder">FaceB00k</a></li>
+                            <li><a href="https://twitter.com/v3n5d3r">7wi773r</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
 
-      function gestureStart() {
-        for (i=0; i<metas.length; i++) {
-          if (metas[i].name == "viewport") {
-            metas[i].content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
-          }
-        }
-      }
-    </script>
-  </body>
+        <footer id="contentinfo" class="body">
+                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
+        </footer><!-- /#contentinfo -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'vensdersb00l10g';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
 </html>
