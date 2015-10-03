@@ -1,3 +1,10 @@
+<meta property="og:title" content="Vensder's B00L10g" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://vensder.github.io" />
+<meta name="twitter:url" content="http://vensder.github.io" />
+<meta itemprop="name" content="Vensder's B00L10g">
+<meta itemprop="url" content="http://vensder.github.io">
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/Blog"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/Blog"> <![endif]-->
@@ -6,7 +13,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Vensder's B00L10g - Articles by Vensder</title>
+<title>Docker</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <link rel="shortcut icon" href="http://vensder.github.io/" type="">
@@ -61,75 +68,41 @@
 
 
             <article class="uk-article" itemtype="http://schema.org/BlogPosting" itemscope="itemscope" itemprop="blogPost">
-                <a href="http://vensder.github.io/virtualenv-for-python-in-centos.html" class="uk-article-title uk-link-muted" itemprop="name">Virtualenv for Python in CentOS</a>
-                <p class="uk-article-meta"><time datetime="2015-10-03" itemprop="datePublished">Sat 03 October 2015</time> • <a href="http://vensder.github.io/category/python.html">python</a> • <br class="uk-visible-small"><i class="uk-icon-comment"></i> <a href="http://vensder.github.io/virtualenv-for-python-in-centos.html#disqus_thread" itemprop="discussionUrl"></a></p>
-</p>
-                <p class="uk-article-lead" itemprop="description">Virtualenv for Python in CentOS Oct 02 22:28:35 Installed: python27-libs-2.7.3-6.2.el6.nux.x86_64 Oct 02 22:28:36 Installed: python27-2.7.3-6.2.el6.nux.x86_64 Oct 02 23:56:57 Installed: python-devel-2.6.6-64.el6.x86_64 Oct 02 23:56:58 Installed: python-virtualenv-1.10 ...</p>
-                <section itemprop="articleBody"><p>Virtualenv for Python in CentOS</p>
-<h6></h6>
-<div class="highlight"><pre>Oct 02 22:28:35 Installed: python27-libs-2.7.3-6.2.el6.nux.x86_64
-Oct 02 22:28:36 Installed: python27-2.7.3-6.2.el6.nux.x86_64
-Oct 02 23:56:57 Installed: python-devel-2.6.6-64.el6.x86_64
-Oct 02 23:56:58 Installed: python-virtualenv-1.10.1-1.el6.noarch
-Oct 02 23:57:03 Installed: python-virtualenv-clone-0.2.4-1.el6.noarch
-Oct 02 23:57:04 Installed: python-virtualenvwrapper-3.5-2.el6.noarch
-</pre></div>
-
-
-<div class="highlight"><pre>mkdir ~/venv <span class="o">&amp;&amp;</span> <span class="nb">cd</span> ~/venv
-virtualenv --no-site-packages &lt;venv_name&gt;
-</pre></div>
-
-
-<div class="highlight"><pre><span class="nb">cd</span> ~/work/&lt;project_name&gt;
-mkdir venv <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;Virtualenv directory&quot;</span> &gt; venv/README
-git add venv <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;/venv/&quot;</span> &gt;&gt; .gitignore <span class="o">&amp;&amp;</span> git add -f .gitignore
-virtualenv --no-site-packages --prompt<span class="o">=</span><span class="s2">&quot;(&lt;project_name&gt;)&quot;</span> &lt;venv_name&gt;
-</pre></div>
-
-
-<div class="highlight"><pre>source ~/venv/&lt;venv_name&gt;/bin/activate
-</pre></div>
-
-
-<div class="highlight"><pre>deactivate
-</pre></div></section>
-                <a href="http://vensder.github.io/virtualenv-for-python-in-centos.html#disqus_thread"></a>
-                <hr class="uk-article-divider">
-            </article>
-
-
-        <article class="uk-article" itemtype="http://schema.org/BlogPosting" itemscope="itemscope" itemprop="blogPost">
                 <a href="http://vensder.github.io/kippo-in-docker.html" class="uk-article-title uk-link-muted" itemprop="name">Kippo in Docker</a>
                 <p class="uk-article-meta"><time datetime="2015-09-28" itemprop="datePublished">Mon 28 September 2015</time> • <a href="http://vensder.github.io/category/docker.html">docker</a> • <br class="uk-visible-small"><i class="uk-icon-comment"></i> <a href="http://vensder.github.io/kippo-in-docker.html#disqus_thread" itemprop="discussionUrl"></a></p>
 </p>
                 <p class="uk-article-lead" itemprop="description">Lightweight Kippo SSH Honeypot (81 MB) based on Alpine Linux Move your real ssh port from default 22 to another (for ex. 22000) Run this docker image by command: sudo docker run -p 22:2222 -d \ --name kippo vensder/alpine-kippo You can view kippo logs from host by commands: sudo ...</p>
-                <p>Lightweight Kippo SSH Honeypot (81 MB) based on Alpine Linux Move your real ssh port from default 22 to another (for ex. 22000) Run this docker image by command: sudo docker run -p 22:2222 -d \ --name kippo vensder/alpine-kippo You can view kippo logs from host by commands: sudo docker logs kippo sudo docker logs -f --tail 10 kippo Also you may use volume mounting for host user with uid:gid 1001:1001 sudo mkdir -p /home/kippo/log/tty sudo chown...</p>
-                <a href="http://vensder.github.io/kippo-in-docker.html">Read More</a>
+                <section itemprop="articleBody"><h1>Lightweight Kippo SSH Honeypot (81 MB) based on Alpine Linux</h1>
+<p>Move your real ssh port from default 22 to another (for ex. 22000)</p>
+<p>Run this docker image by command:</p>
+<div class="highlight"><pre>sudo docker run -p 22:2222 -d <span class="se">\</span>
+  --name kippo vensder/alpine-kippo
+</pre></div>
+
+
+<p>You can view kippo logs from host by commands:</p>
+<div class="highlight"><pre>sudo docker logs kippo
+sudo docker logs -f --tail <span class="m">10</span> kippo 
+</pre></div>
+
+
+<p>Also you may use volume mounting for host user with uid:gid 1001:1001</p>
+<div class="highlight"><pre>sudo mkdir -p /home/kippo/log/tty
+sudo chown -R 1001:1001 /home/kippo
+sudo docker run -p 22:2222 -v /home/kippo/log:/home/kippo/log -d <span class="se">\</span>
+   --name kippo vensder/alpine-kippo
+</pre></div>
+
+
+<p>If you use SELinux on host system, you must change file SELinux security context:</p>
+<div class="highlight"><pre>sudo chcon -Rt svirt_sandbox_file_t /home/kippo
+</pre></div>
+
+
+<p>Logs will be write to /home/kippo/log/tty/ directory on your host system.</p></section>
+                <a href="http://vensder.github.io/kippo-in-docker.html#disqus_thread"></a>
                 <hr class="uk-article-divider">
-        </article>
-
-
-        <article class="uk-article" itemtype="http://schema.org/BlogPosting" itemscope="itemscope" itemprop="blogPost">
-                <a href="http://vensder.github.io/about.html" class="uk-article-title uk-link-muted" itemprop="name">About</a>
-                <p class="uk-article-meta"><time datetime="2015-09-28" itemprop="datePublished">Mon 28 September 2015</time> • <a href="http://vensder.github.io/category/about.html">about</a> • <br class="uk-visible-small"><i class="uk-icon-comment"></i> <a href="http://vensder.github.io/about.html#disqus_thread" itemprop="discussionUrl"></a></p>
-</p>
-                <p class="uk-article-lead" itemprop="description">Linux system administrator Tags: CentOS, Linux System Administration, Unix System Administration, Zabbix, Apache administration, Nginx, KVM Virtualization, phpMyAdmin, OpenVPN, Docker Overview Hello! I'm Dmitry. Nice to meet you! I've 8+ years of experience in Linux System Administration (installing, configuring, maintaining, monitoring, troubleshooting Linux servers and services) . I worked ...</p>
-                <p>Linux system administrator Tags: CentOS, Linux System Administration, Unix System Administration, Zabbix, Apache administration, Nginx, KVM Virtualization, phpMyAdmin, OpenVPN, Docker Overview Hello! I'm Dmitry. Nice to meet you! I've 8+ years of experience in Linux System Administration (installing, configuring, maintaining, monitoring, troubleshooting Linux servers and services) . I worked closely with development team at my previous job. My responsibilities included: Linux servers (based on CentOS, Debian, Ubuntu) on dedicated and virtual servers. KVM virtualization, iptables, routing, Linux kernel tuning. Zabbix monitoring...</p>
-                <a href="http://vensder.github.io/about.html">Read More</a>
-                <hr class="uk-article-divider">
-        </article>
-
-
-        <article class="uk-article" itemtype="http://schema.org/BlogPosting" itemscope="itemscope" itemprop="blogPost">
-                <a href="http://vensder.github.io/todo-list.html" class="uk-article-title uk-link-muted" itemprop="name">Todo List</a>
-                <p class="uk-article-meta"><time datetime="2015-09-28" itemprop="datePublished">Mon 28 September 2015</time> • <a href="http://vensder.github.io/category/todo.html">todo</a> • <br class="uk-visible-small"><i class="uk-icon-comment"></i> <a href="http://vensder.github.io/todo-list.html#disqus_thread" itemprop="discussionUrl"></a></p>
-</p>
-                <p class="uk-article-lead" itemprop="description">cryptocurrency (daemons and clients) in docker php-app (twitter) on openshift python, git ruby, chef, ansible, puppet openstack hadoop</p>
-                <p>cryptocurrency (daemons and clients) in docker php-app (twitter) on openshift python, git ruby, chef, ansible, puppet openstack hadoop...</p>
-                <a href="http://vensder.github.io/todo-list.html">Read More</a>
-                <hr class="uk-article-divider">
-        </article>
+            </article>
 
 
 </div>
@@ -147,7 +120,7 @@ virtualenv --no-site-packages --prompt<span class="o">=</span><span class="s2">&
                 <ul class="uk-nav uk-nav-side">
                     <li class="uk-nav-header">Categories</li>
                     <li ><a href="http://vensder.github.io/category/about.html">about</a></li>
-                    <li ><a href="http://vensder.github.io/category/docker.html">docker</a></li>
+                    <li class="uk-active"><a href="http://vensder.github.io/category/docker.html">docker</a></li>
                     <li ><a href="http://vensder.github.io/category/python.html">python</a></li>
                     <li ><a href="http://vensder.github.io/category/todo.html">todo</a></li>
                     <li class="uk-nav-header">Pages</li>
@@ -219,7 +192,7 @@ virtualenv --no-site-packages --prompt<span class="o">=</span><span class="s2">&
         <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
             <li class="uk-nav-header">Categories</li>
             <li ><a href="http://vensder.github.io/category/about.html">about</a></li>
-            <li ><a href="http://vensder.github.io/category/docker.html">docker</a></li>
+            <li class="uk-active"><a href="http://vensder.github.io/category/docker.html">docker</a></li>
             <li ><a href="http://vensder.github.io/category/python.html">python</a></li>
             <li ><a href="http://vensder.github.io/category/todo.html">todo</a></li>
             <li class="uk-nav-header">Pages</li>        

@@ -68,52 +68,19 @@
 
 
             <article class="uk-article" itemtype="http://schema.org/BlogPosting" itemscope="itemscope" itemprop="blogPost">
-                <a href="http://vensder.github.io/kippo-in-docker.html" class="uk-article-title uk-link-muted" itemprop="name">Kippo in Docker</a>
-                <p class="uk-article-meta"><time datetime="2015-09-28" itemprop="datePublished">Mon 28 September 2015</time> • <a href="http://vensder.github.io/category/todo.html">todo</a> • <br class="uk-visible-small"><i class="uk-icon-comment"></i> <a href="http://vensder.github.io/kippo-in-docker.html#disqus_thread" itemprop="discussionUrl"></a></p>
-</p>
-                <p class="uk-article-lead" itemprop="description">Lightweight Kippo SSH Honeypot (81 MB) based on Alpine Linux Move your real ssh port from default 22 to another (for ex. 22000) Run this docker image by command: sudo docker run -p 22:2222 -d \ --name kippo vensder/alpine-kippo You can view kippo logs from host by commands: sudo ...</p>
-                <section itemprop="articleBody"><h1>Lightweight Kippo SSH Honeypot (81 MB) based on Alpine Linux</h1>
-<p>Move your real ssh port from default 22 to another (for ex. 22000)</p>
-<p>Run this docker image by command:</p>
-<div class="highlight"><pre>sudo docker run -p 22:2222 -d <span class="se">\</span>
-  --name kippo vensder/alpine-kippo
-</pre></div>
-
-
-<p>You can view kippo logs from host by commands:</p>
-<div class="highlight"><pre>sudo docker logs kippo
-sudo docker logs -f --tail <span class="m">10</span> kippo 
-</pre></div>
-
-
-<p>Also you may use volume mounting for host user with uid:gid 1001:1001</p>
-<div class="highlight"><pre>sudo mkdir -p /home/kippo/log/tty
-sudo chown -R 1001:1001 /home/kippo
-sudo docker run -p 22:2222 -v /home/kippo/log:/home/kippo/log -d <span class="se">\</span>
-   --name kippo vensder/alpine-kippo
-</pre></div>
-
-
-<p>If you use SELinux on host system, you must change file SELinux security context:</p>
-<div class="highlight"><pre>sudo chcon -Rt svirt_sandbox_file_t /home/kippo
-</pre></div>
-
-
-<p>Logs will be write to /home/kippo/log/tty/ directory on your host system.</p></section>
-                <a href="http://vensder.github.io/kippo-in-docker.html#disqus_thread"></a>
-                <hr class="uk-article-divider">
-            </article>
-
-
-        <article class="uk-article" itemtype="http://schema.org/BlogPosting" itemscope="itemscope" itemprop="blogPost">
                 <a href="http://vensder.github.io/todo-list.html" class="uk-article-title uk-link-muted" itemprop="name">Todo List</a>
                 <p class="uk-article-meta"><time datetime="2015-09-28" itemprop="datePublished">Mon 28 September 2015</time> • <a href="http://vensder.github.io/category/todo.html">todo</a> • <br class="uk-visible-small"><i class="uk-icon-comment"></i> <a href="http://vensder.github.io/todo-list.html#disqus_thread" itemprop="discussionUrl"></a></p>
 </p>
                 <p class="uk-article-lead" itemprop="description">cryptocurrency (daemons and clients) in docker php-app (twitter) on openshift python, git ruby, chef, ansible, puppet openstack hadoop</p>
-                <p>cryptocurrency (daemons and clients) in docker php-app (twitter) on openshift python, git ruby, chef, ansible, puppet openstack hadoop...</p>
-                <a href="http://vensder.github.io/todo-list.html">Read More</a>
+                <section itemprop="articleBody"><p>cryptocurrency (daemons and clients) in <strong>docker</strong></p>
+<p>php-app (twitter) on <strong>openshift</strong></p>
+<p><strong>python</strong>, git</p>
+<p>ruby, chef, <strong>ansible</strong>, puppet </p>
+<p><strong>openstack</strong></p>
+<p>hadoop </p></section>
+                <a href="http://vensder.github.io/todo-list.html#disqus_thread"></a>
                 <hr class="uk-article-divider">
-        </article>
+            </article>
 
 
 </div>
@@ -131,6 +98,7 @@ sudo docker run -p 22:2222 -v /home/kippo/log:/home/kippo/log -d <span class="se
                 <ul class="uk-nav uk-nav-side">
                     <li class="uk-nav-header">Categories</li>
                     <li ><a href="http://vensder.github.io/category/about.html">about</a></li>
+                    <li ><a href="http://vensder.github.io/category/docker.html">docker</a></li>
                     <li ><a href="http://vensder.github.io/category/python.html">python</a></li>
                     <li class="uk-active"><a href="http://vensder.github.io/category/todo.html">todo</a></li>
                     <li class="uk-nav-header">Pages</li>
@@ -202,6 +170,7 @@ sudo docker run -p 22:2222 -v /home/kippo/log:/home/kippo/log -d <span class="se
         <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
             <li class="uk-nav-header">Categories</li>
             <li ><a href="http://vensder.github.io/category/about.html">about</a></li>
+            <li ><a href="http://vensder.github.io/category/docker.html">docker</a></li>
             <li ><a href="http://vensder.github.io/category/python.html">python</a></li>
             <li class="uk-active"><a href="http://vensder.github.io/category/todo.html">todo</a></li>
             <li class="uk-nav-header">Pages</li>        
