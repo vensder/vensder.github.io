@@ -1,37 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-          <title>Vensder's B00L10g</title>
-        <meta charset="utf-8" />
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Virtualenv for Python in CentOSVensder's B00L10g</title>
 
+    <link rel="stylesheet" href="http://vensder.github.io/theme/css/main.css">
+    <link rel="stylesheet" href="http://vensder.github.io/theme/css/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div><img src="http://www.gravatar.com/avatar/cc3d6d02dee2b5b5c81460cab4d9da14?s=120&d=images%2Ftuxup_100.jpg" class="grv-img"/></div>
+        <div class="title"><a href="http://vensder.github.io/">Vensder's B00L10g </a></div>
+        <div class="sub-title"></div>
 
+<p>
+  <div class="view"><a href="http://vensder.github.io/archives.html">Archives</a></div>
+</p>
 
+<!-- Social links -->
+<div class="social">
+<h4>Follow Me</h4>
+<ul>
+    <li><a href="https://www.linkedin.com/in/vensder">LinkedIN</a></li>
+    <li><a href="https://www.facebook.com/vensder">FaceB00k</a></li>
+    <li><a href="https://twitter.com/v3n5d3r">7wi773r</a></li>
+</ul>
+</div>
 
-</head>
-
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="http://vensder.github.io/">Vensder's B00L10g <strong></strong></a></h1>
-        </header><!-- /#banner -->
-        <nav id="menu"><ul>
-        </ul></nav><!-- /#menu -->
+      </header>
+      <section>
 <section id="content" class="body">
-  <header>
-    <h2 class="entry-title">
-      <a href="http://vensder.github.io/virtualenv-for-python-in-centos.html" rel="bookmark"
-         title="Permalink to Virtualenv for Python in CentOS">Virtualenv for Python in CentOS</a></h2>
- 
-  </header>
-  <footer class="post-info">
-    <abbr class="published" title="2015-10-03T11:04:00+03:00">
-      Sat 03 October 2015
-    </abbr>
-    <address class="vcard author">
-      By           <a class="url fn" href="http://vensder.github.io/author/vensder.html">Vensder</a>
-    </address>
-  </footer><!-- /.post-info -->
-  <div class="entry-content">
-    <p>Virtualenv for Python in CentOS</p>
+  <article>
+      <div class="article-title">
+        Virtualenv for Python in CentOS
+      </div>
+
+    <div class="entry-content">
+<p>
+<small>
+<abbr class="published" title="2015-10-03T11:04:00+03:00">
+  Sat 03 October 2015
+</abbr> | 
+ -- (<a href="http://vensder.github.io/virtualenv-for-python-in-centos.html" rel="bookmark">permalink</a>)
+</small>
+</p>      <p>Virtualenv for Python in CentOS</p>
 <h6></h6>
 <div class="highlight"><pre>Oct 02 22:28:35 Installed: python27-libs-2.7.3-6.2.el6.nux.x86_64
 Oct 02 22:28:36 Installed: python27-2.7.3-6.2.el6.nux.x86_64
@@ -60,13 +78,51 @@ virtualenv --no-site-packages --prompt<span class="o">=</span><span class="s2">&
 
 <div class="highlight"><pre>deactivate
 </pre></div>
-  </div><!-- /.entry-content -->
+    </div><!-- /.entry-content -->
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'vensdersb00l10g'; // required: replace example with your forum shortname
+        var disqus_identifier = "virtualenv-for-python-in-centos.html";
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </article>
 </section>
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-        </footer><!-- /#contentinfo -->
-</body>
+      </section>
+      <footer>
+        <p><small>&copy; Vensder's B00L10g &mdash; Theme based on Sundown by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <!-- Scale fix -->
+    <script>
+      var metas = document.getElementsByTagName('meta');
+      var i;
+      
+      if (navigator.userAgent.match(/iPhone/i)) {
+        for (i=0; i<metas.length; i++) {
+          if (metas[i].name == "viewport") {
+            metas[i].content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+          }
+        }
+      
+        document.addEventListener("gesturestart", gestureStart, false);
+      }
+
+      function gestureStart() {
+        for (i=0; i<metas.length; i++) {
+          if (metas[i].name == "viewport") {
+            metas[i].content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
+          }
+        }
+      }
+    </script>
+  </body>
 </html>
