@@ -1,30 +1,15 @@
-jQuery.fn.autohidebacktotop = function() {
-	if ($("html, body").height() <= $(window).height()) {
-		$("#autohidebacktotop").remove();
-	}
-	this.bind("click", function() {
-		$("html, body").animate({scrollTop:0});
-		return false;
-	});
-};
+'use strict';
 
-jQuery(document).ready(function($) {
-	// Auto-handle direct jpeg links
-	$('a[href$="jpg"]').each(function() {
-        $(this).colorbox({
-            maxWidth: '100%'
-        });
-	});
+$(document).ready(function() {
+    $('.mg-container-social').height($('article').height());
+    $('#mg-panel-social').stick_in_parent({offset_top: 35});
 
-    $("#back-to-top").autohidebacktotop();
-
-    $(window).scroll(function() {
-        if ($(this).scrollTop()) {
-            $('#back-to-top:hidden').stop(true, true).fadeIn();
-        } else {
-            $('#back-to-top').stop(true, true).fadeOut();
-        }
+    $('#tipue_search_input').tipuesearch({
+        'show': 10,
+        'mode': 'json',
+        'showURL': false,
+        'descriptiveWords': 75,
+        'highlightEveryTerm': true,
+        'contentLocation': '/tipue_search.json'
     });
 });
-
-
