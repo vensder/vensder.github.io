@@ -79,19 +79,19 @@
         <section itemprop="articleBody"><p>Lightweight Kippo SSH Honeypot (81 MB) based on Alpine Linux</p>
 <h6></h6>
 <p>Move your real ssh port from default 22 to another (for ex. 22000)</p>
-<h5>Run this docker image by command:</h5>
+<p>Run this docker image by command:</p>
 <div class="highlight"><pre>sudo docker run -p 22:2222 -d <span class="se">\</span>
   --name kippo vensder/alpine-kippo
 </pre></div>
 
 
-<h5>You can view kippo logs from host by commands:</h5>
+<p>You can view kippo logs from host by commands:</p>
 <div class="highlight"><pre>sudo docker logs kippo
 sudo docker logs -f --tail <span class="m">10</span> kippo 
 </pre></div>
 
 
-<h5>Also you may use volume mounting for host user with uid:gid 1001:1001</h5>
+<p>Also you may use volume mounting for host user with uid:gid 1001:1001</p>
 <div class="highlight"><pre>sudo mkdir -p /home/kippo/log/tty
 sudo chown -R 1001:1001 /home/kippo
 sudo docker run -p 22:2222 -v /home/kippo/log:/home/kippo/log -d <span class="se">\</span>
@@ -99,7 +99,7 @@ sudo docker run -p 22:2222 -v /home/kippo/log:/home/kippo/log -d <span class="se
 </pre></div>
 
 
-<h5>If you use SELinux on host system, you must change file SELinux security context:</h5>
+<p>If you use SELinux on host system, you must change file SELinux security context:</p>
 <div class="highlight"><pre>sudo chcon -Rt svirt_sandbox_file_t /home/kippo
 </pre></div>
 
