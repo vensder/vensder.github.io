@@ -90,6 +90,18 @@ sudo docker run -p 22:2222 -v /home/kippo/log:/home/kippo/log -d <span class="se
 
 
 <p>Logs will be write to /home/kippo/log/tty/ directory on your host system.</p>
+<p>Script for making userdb.txt based on attempts of bastards:</p>
+<div class="highlight"><pre><span class="c">#!/bin/bash</span>
+
+<span class="c"># make user db with login and pass from kippo logs</span>
+
+docker logs kippo <span class="se">\</span>
+| grep <span class="s1">&#39;login attempt&#39;</span> <span class="se">\</span>
+| grep failed <span class="se">\</span>
+| awk <span class="s1">&#39;{print $9}&#39;</span> <span class="se">\</span>
+| sort | uniq <span class="se">\</span>
+| sed <span class="s1">&#39;s/\//:0:/&#39;</span> | sed <span class="s1">&#39;s/\[//&#39;</span> | sed <span class="s1">&#39;s/\]//&#39;</span> &gt;userdb.txt
+</pre></div>
             <a href="#" class="go-top">Go Top</a>
     <div class="comments">
         <div id="disqus_thread"></div>
