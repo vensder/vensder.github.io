@@ -65,43 +65,31 @@
             <h3>Lightweight Kippo SSH Honeypot (81 MB) based on Alpine Linux</h3>
 <p>Move your real ssh port from default 22 to another (for ex. 22000)</p>
 <p>Run this docker image by command:</p>
-<div class="highlight"><pre>sudo docker run -p 22:2222 -d <span class="se">\</span>
+<div class="highlight"><pre><span></span>sudo docker run -p <span class="m">22</span>:2222 -d <span class="se">\</span>
   --name kippo vensder/alpine-kippo
 </pre></div>
 
 
 <p>You can view kippo logs from host by commands:</p>
-<div class="highlight"><pre>sudo docker logs kippo
-sudo docker logs -f --tail 10 kippo 
+<div class="highlight"><pre><span></span>sudo docker logs kippo
+sudo docker logs -f --tail <span class="m">10</span> kippo 
 </pre></div>
 
 
 <p>Also you may use volume mounting for host user with uid:gid 1001:1001</p>
-<div class="highlight"><pre>sudo mkdir -p /home/kippo/log/tty
-sudo chown -R 1001:1001 /home/kippo
-sudo docker run -p 22:2222 -v /home/kippo/log:/home/kippo/log -d <span class="se">\</span>
+<div class="highlight"><pre><span></span>sudo mkdir -p /home/kippo/log/tty
+sudo chown -R <span class="m">1001</span>:1001 /home/kippo
+sudo docker run -p <span class="m">22</span>:2222 -v /home/kippo/log:/home/kippo/log -d <span class="se">\</span>
    --name kippo vensder/alpine-kippo
 </pre></div>
 
 
 <p>If you use SELinux on host system, you must change file SELinux security context:</p>
-<div class="highlight"><pre>sudo chcon -Rt svirt_sandbox_file_t /home/kippo
+<div class="highlight"><pre><span></span>sudo chcon -Rt svirt_sandbox_file_t /home/kippo
 </pre></div>
 
 
 <p>Logs will be write to /home/kippo/log/tty/ directory on your host system.</p>
-<p>Script for making userdb.txt based on attempts of bastards:</p>
-<div class="highlight"><pre><span class="c">#!/bin/bash</span>
-
-<span class="c"># make user db with login and pass from kippo logs</span>
-
-docker logs kippo <span class="se">\</span>
-| grep <span class="s1">&#39;login attempt&#39;</span> <span class="se">\</span>
-| grep failed <span class="se">\</span>
-| awk <span class="s1">&#39;{print $9}&#39;</span> <span class="se">\</span>
-| sort | uniq <span class="se">\</span>
-| sed <span class="s1">&#39;s/\//:0:/&#39;</span> | sed <span class="s1">&#39;s/\[//&#39;</span> | sed <span class="s1">&#39;s/\]//&#39;</span> &gt;userdb.txt
-</pre></div>
             <a href="#" class="go-top">Go Top</a>
     <div class="comments">
         <div id="disqus_thread"></div>
