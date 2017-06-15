@@ -56,11 +56,34 @@
                     <section class="post">
                         <header class="post-header">
                             <h3><a class="post-title" href="http://vensder.github.io/done-list.html">Done List</a></h3>
-                            <p class="post-meta"><p><strong>docker</strong>, docker-compose</p>
+                            <p class="post-meta"><ul>
+<li>
+<p><strong>docker</strong>, docker-compose</p>
+</li>
+<li>
 <p><strong>python</strong>, git</p>
+</li>
+<li>
 <p><strong>ansible</strong> </p>
+</li>
+<li>
 <p><strong>jenkins</strong></p>
-<p>CI/CD: Slack + Python RTM bot + Jenkins</p></p>
+</li>
+<li>
+<p>CI/CD:</p>
+<ul>
+<li>Git push -&gt; Jenkins test &amp; build -&gt; Docker Registry</li>
+<li>Slack command -&gt; Python RTM bot -&gt; Jenkins deploy -&gt; Slack notification</li>
+</ul>
+</li>
+<li>
+<p>Monitoring:</p>
+<ul>
+<li>Zabbix -&gt; Slack</li>
+<li>AWS CloudWatch -&gt; AWS Lambda -&gt; Slack</li>
+</ul>
+</li>
+</ul></p>
                             <p class="post-meta">
                                 in <a href="http://vensder.github.io/category/todo.html">todo</a> &middot; Thu 15 June 2017
                             </p>

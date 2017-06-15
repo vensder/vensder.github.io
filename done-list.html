@@ -62,11 +62,34 @@
                             // under                         </p>
                 </header>
             </section>
-            <p><strong>docker</strong>, docker-compose</p>
+            <ul>
+<li>
+<p><strong>docker</strong>, docker-compose</p>
+</li>
+<li>
 <p><strong>python</strong>, git</p>
+</li>
+<li>
 <p><strong>ansible</strong> </p>
+</li>
+<li>
 <p><strong>jenkins</strong></p>
-<p>CI/CD: Slack + Python RTM bot + Jenkins</p>
+</li>
+<li>
+<p>CI/CD:</p>
+<ul>
+<li>Git push -&gt; Jenkins test &amp; build -&gt; Docker Registry</li>
+<li>Slack command -&gt; Python RTM bot -&gt; Jenkins deploy -&gt; Slack notification</li>
+</ul>
+</li>
+<li>
+<p>Monitoring:</p>
+<ul>
+<li>Zabbix -&gt; Slack</li>
+<li>AWS CloudWatch -&gt; AWS Lambda -&gt; Slack</li>
+</ul>
+</li>
+</ul>
             <a href="#" class="go-top">Go Top</a>
     <div class="comments">
         <div id="disqus_thread"></div>
