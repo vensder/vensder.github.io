@@ -8,12 +8,10 @@
 
         <title>Done List // Vensder's B10g // </title>
 
-    <link href="http://linuxforchildren.com/templates/tuxy_main/favicon.ico" rel="icon">
-
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://vensder.github.io/theme/css/pure.css">
-    <link rel="stylesheet" href="http://vensder.github.io/theme/css/pygments.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://vensder.github.io/theme/css/pure.css">
+    <link rel="stylesheet" href="https://vensder.github.io/theme/css/pygments.css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
@@ -32,7 +30,7 @@
                     <header class="header">
                         <hgroup>
                             <img class="avatar" src="http://vensder.github.io/images/tuxup.jpg">
-                            <h1 class="brand-main"><a href="http://vensder.github.io">Vensder's B10g</a></h1>
+                            <h1 class="brand-main"><a href="/">Vensder's B10g</a></h1>
                             <p class="tagline"></p>
                                 <p class="social">
                                     <a href="http://linuxforchildren.com">
@@ -47,7 +45,7 @@
                                     <a href="https://twitter.com/v3n5d3r">
                                         <i class="fa fa-twitter-square fa-3x"></i>
                                     </a>
-                                </p>
+                                <p>
                         </hgroup>
                     </header>
                 </div>
@@ -63,45 +61,25 @@
                 </header>
             </section>
             <ul>
-<li>
-<p>AWS (EC2, S3, Route 53, RDS, Lambda, ECR, SNS, SQS, SES, IAM, Inspector) </p>
-</li>
-<li>
-<p><strong>docker</strong>, docker-compose</p>
-</li>
-<li>
-<p><strong>python</strong></p>
-</li>
-<li>
-<p><strong>ansible</strong> </p>
-</li>
-<li>
-<p><strong>jenkins</strong></p>
-</li>
-<li>
-<p>Let's Encrypt:</p>
-<ul>
+<li>AWS (EC2, S3, Route 53, RDS, Lambda, ECR, SNS, SQS, SES, IAM, Inspector)</li>
+<li>docker, docker-compose</li>
+<li>python</li>
+<li>ansible</li>
+<li>jenkins</li>
+<li>Let's Encrypt:<ul>
 <li>Slack command -&gt; Python RTM bot -&gt; Jenkins Job for new subdomain</li>
 <li>Jenkins Periodical Job for SSL renew -&gt; Slack report</li>
 <li>SSL certs info page for all subdomains (Python, bottle, uWISGI in Docker, Nginx)</li>
 </ul>
 </li>
-<li>
-<p>GitHub, GitLab, Gogs, gitolite (+ Jenkins and Slack integrations)</p>
-</li>
-<li>
-<p>Golang (simple dockerized services: Slack slash command, Slach help bot)</p>
-</li>
-<li>
-<p>CI/CD:</p>
-<ul>
+<li>GitHub, GitLab, Gogs, gitolite (+ Jenkins and Slack integrations)</li>
+<li>Golang (simple dockerized services: Slack slash command, Slach help bot)</li>
+<li>CI/CD:<ul>
 <li>Git push -&gt; Jenkins tests &amp; builds, OWASP Dependency-Check analysis -&gt; Docker Registry -&gt; [Jenkins deploy]</li>
 <li>Slack command -&gt; Python RTM bot -&gt; Jenkins deploy -&gt; Slack notification</li>
 </ul>
 </li>
-<li>
-<p>Monitoring:</p>
-<ul>
+<li>Monitoring:<ul>
 <li>Zabbix -&gt; Slack</li>
 <li>AWS CloudWatch -&gt; AWS SNS -&gt; AWS Lambda -&gt; Slack</li>
 </ul>
@@ -125,7 +103,7 @@
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     </div>
 <footer class="footer">
-    <p>&copy; Vensder &ndash;
+    <p>&copy; Vensder's B10g &ndash;
         Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
         for <a href="http://blog.getpelican.com/">Pelican</a>
     </p>
@@ -156,6 +134,5 @@
             event.preventDefault();
         });
     </script>
-
 </body>
 </html>

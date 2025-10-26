@@ -8,12 +8,10 @@
 
         <title>Virtualenv for Python in CentOS // Vensder's B10g // </title>
 
-    <link href="http://linuxforchildren.com/templates/tuxy_main/favicon.ico" rel="icon">
-
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://vensder.github.io/theme/css/pure.css">
-    <link rel="stylesheet" href="http://vensder.github.io/theme/css/pygments.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://vensder.github.io/theme/css/pure.css">
+    <link rel="stylesheet" href="https://vensder.github.io/theme/css/pygments.css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
@@ -32,7 +30,7 @@
                     <header class="header">
                         <hgroup>
                             <img class="avatar" src="http://vensder.github.io/images/tuxup.jpg">
-                            <h1 class="brand-main"><a href="http://vensder.github.io">Vensder's B10g</a></h1>
+                            <h1 class="brand-main"><a href="/">Vensder's B10g</a></h1>
                             <p class="tagline"></p>
                                 <p class="social">
                                     <a href="http://linuxforchildren.com">
@@ -47,7 +45,7 @@
                                     <a href="https://twitter.com/v3n5d3r">
                                         <i class="fa fa-twitter-square fa-3x"></i>
                                     </a>
-                                </p>
+                                <p>
                         </hgroup>
                     </header>
                 </div>
@@ -64,33 +62,29 @@
             </section>
             <p>Virtualenv for Python in CentOS</p>
 <h6></h6>
-<div class="highlight"><pre><span></span>Oct 02 22:28:35 Installed: python27-libs-2.7.3-6.2.el6.nux.x86_64
+<div class="highlight"><pre><span></span><code>Oct 02 22:28:35 Installed: python27-libs-2.7.3-6.2.el6.nux.x86_64
 Oct 02 22:28:36 Installed: python27-2.7.3-6.2.el6.nux.x86_64
 Oct 02 23:56:57 Installed: python-devel-2.6.6-64.el6.x86_64
 Oct 02 23:56:58 Installed: python-virtualenv-1.10.1-1.el6.noarch
 Oct 02 23:57:03 Installed: python-virtualenv-clone-0.2.4-1.el6.noarch
 Oct 02 23:57:04 Installed: python-virtualenvwrapper-3.5-2.el6.noarch
-</pre></div>
+</code></pre></div>
 
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>~/venv<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/venv
+virtualenv<span class="w"> </span>--no-site-packages<span class="w"> </span>&lt;venv_name&gt;
+</code></pre></div>
 
-<div class="highlight"><pre><span></span>mkdir ~/venv <span class="o">&amp;&amp;</span> <span class="nb">cd</span> ~/venv
-virtualenv --no-site-packages &lt;venv_name&gt;
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/work/&lt;project_name&gt;
+mkdir<span class="w"> </span>venv<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Virtualenv directory&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>venv/README
+git<span class="w"> </span>add<span class="w"> </span>venv<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;/venv/&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>-f<span class="w"> </span>.gitignore
+virtualenv<span class="w"> </span>--no-site-packages<span class="w"> </span>--prompt<span class="o">=</span><span class="s2">&quot;(&lt;project_name&gt;)&quot;</span><span class="w"> </span>&lt;venv_name&gt;
+</code></pre></div>
 
+<div class="highlight"><pre><span></span><code>source ~/venv/&lt;venv_name&gt;/bin/activate
+</code></pre></div>
 
-<div class="highlight"><pre><span></span><span class="nb">cd</span> ~/work/&lt;project_name&gt;
-mkdir venv <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;Virtualenv directory&quot;</span> &gt; venv/README
-git add venv <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;/venv/&quot;</span> &gt;&gt; .gitignore <span class="o">&amp;&amp;</span> git add -f .gitignore
-virtualenv --no-site-packages --prompt<span class="o">=</span><span class="s2">&quot;(&lt;project_name&gt;)&quot;</span> &lt;venv_name&gt;
-</pre></div>
-
-
-<div class="highlight"><pre><span></span>source ~/venv/&lt;venv_name&gt;/bin/activate
-</pre></div>
-
-
-<div class="highlight"><pre><span></span>deactivate
-</pre></div>
+<div class="highlight"><pre><span></span><code>deactivate
+</code></pre></div>
             <a href="#" class="go-top">Go Top</a>
     <div class="comments">
         <div id="disqus_thread"></div>
@@ -109,7 +103,7 @@ virtualenv --no-site-packages --prompt<span class="o">=</span><span class="s2">&
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     </div>
 <footer class="footer">
-    <p>&copy; Vensder &ndash;
+    <p>&copy; Vensder's B10g &ndash;
         Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
         for <a href="http://blog.getpelican.com/">Pelican</a>
     </p>
@@ -140,6 +134,5 @@ virtualenv --no-site-packages --prompt<span class="o">=</span><span class="s2">&
             event.preventDefault();
         });
     </script>
-
 </body>
 </html>
